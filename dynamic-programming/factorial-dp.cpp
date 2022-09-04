@@ -1,9 +1,9 @@
 #include<iostream>
 using namespace std;
 
-int main() {
+int main () {
 	int n = 0;
-	cout << "Enter the fibonacci series number: ";
+	cout << "Enter the factorial number: ";
 	cin >> n;
 	cout << endl;
 	if (n <= 1) {
@@ -11,11 +11,9 @@ int main() {
 	}
 	
 	int f[n+1];
-	f[0] = 0;
-	f[1] = 1;
-	
-	for (int i = 2; i <= n; i++) {
-		f[i] = f[i-1] + f[i-2];
+	f[0] = 1;
+	for (int i = 1; i <= n; i++) {
+		f[i] = f[i-1] * i;
 		cout << f[i] << endl;
 	}
 	
